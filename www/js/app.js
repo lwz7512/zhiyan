@@ -40,46 +40,71 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.choosen', {
+    url: '/choosen',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-choosen': {
+        templateUrl: 'templates/editor-select.html',
+        controller: 'EditorChooseCtrl'
       }
     }
   })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.choosen-detail', {
+    url: '/choosen-detail/:pageId',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-choosen': {
+        templateUrl: 'templates/article-detail.html',
+        controller: 'ArtDetailCtrl'
+      }
+    }
+  })
+  .state('tab.hots', {
+      url: '/hots',
+      views: {
+        'tab-hots': {
+          templateUrl: 'templates/hot-article.html',
+          controller: 'HotsCtrl'
+        }
+      }
+    })
+  .state('tab.hot-detail', {
+    url: '/hot-detail/:pageId',
+    views: {
+      'tab-hots': {
+        templateUrl: 'templates/article-detail.html',
+        controller: 'ArtDetailCtrl'
+      }
+    }
+  })
+  .state('tab.bookstore', {
+    url: '/bookstore',
+    views: {
+      'tab-bookstore': {
+        templateUrl: 'templates/book-store.html',
+        controller: 'BookStoreCtrl'
+      }
+    }
+  })
+  .state('tab.book-detail', {
+    url: '/book-detail/:bookId',
+    views: {
+      'tab-bookstore': {
+        templateUrl: 'templates/book-detail.html',
+        controller: 'BookDetailCtrl'
+      }
+    }
+  })
+  .state('tab.contactus', {
+    url: '/contactus',
+    views: {
+      'tab-contactus': {
+        templateUrl: 'templates/contact-us.html',
+        controller: 'ContactCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/choosen');
 
 });

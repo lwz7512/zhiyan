@@ -1,0 +1,10 @@
+<ion-view view-title="热门文章">
+  <ion-content>
+    <ul class="list">
+      <a class="item item-icon-right" ng-repeat="article in articles" href="#/tab/hot-detail/{{article.id}}">
+        {{article.title}}
+        <i class="icon ion-ios-arrow-right gray"></i>
+      </a>
+    </ul>
+  </ion-content>
+</ion-view>

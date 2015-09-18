@@ -1,0 +1,11 @@
+<ion-view view-title="炎黄图书">
+  <ion-content>
+    <div class="list">
+      <a class="item item-thumbnail-left" ng-repeat="book in books" href="#/tab/book-detail/{{book.id}}">
+        <img src="{{book.img}}">
+        <h2>{{book.title}}</h2>
+        <p class="margin-top-20px">{{book.intro}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
