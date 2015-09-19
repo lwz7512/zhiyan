@@ -9,8 +9,8 @@ angular.module('starter.controllers', [])
     // Setup the loader
   $scope.show = function() {
     $ionicLoading.show({
-//      template: 'loading...',
-      template: '<ion-spinner icon="lines" class="spinner-stable"></ion-spinner>',//ionic 1.0.1@2015/07/25
+      template: 'loading...',
+//      template: '<ion-spinner icon="lines" class="spinner-stable"></ion-spinner>',//ionic 1.0.1@2015/07/25
       animation: 'fade-in',
       showBackdrop: false,
       maxWidth: 50,
